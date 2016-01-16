@@ -214,10 +214,12 @@ matrix operator * (const matrix & A , const matrix & B)
     p = A.n;
     n = B.n;
     double alpha = 1.0, beta = 0.0;
-    //int a = clock();
-    double s_initial,s_elapsed;
-    s_initial = dsecnd();
+    int a = clock();
+    //double s_initial,s_elapsed;
+    //s_initial = dsecnd();
     cblas_dgemm(CblasRowMajor, CblasNoTrans, CblasNoTrans,m,n,p,alpha,A.p,p,B.p,n,beta,(*res).p,n);
+    int b = clock();
+    cout<<double(b-a)/CLOCKS_PER_SEC<<endl;
     return *res;
 }
 

@@ -1,7 +1,7 @@
 all: compile
 
 compile: Project.cpp
-	icc -mkl -o project Project.cpp
+	icc -pg -mkl -o project Project.cpp
 
 clean:
 	$(RM) a.out
