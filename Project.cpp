@@ -10,6 +10,7 @@
 #include <stdlib.h> /*srand, rand*/
 #include <time.h>   /*time*/
 #include <assert.h>
+#include <string.h>
 #include "mkl.h"
 
 using namespace std;
